@@ -7,11 +7,12 @@ using UnityEngine.UI;
 
 public class LoginMain : MonoBehaviour
 {
+    #region RegisterLogin System
     [SerializeField] InputField _emailRegister, _passwordRegister, _usernameRegister, _repeatPasswordRegister;
     [SerializeField] InputField _passwordLogin, _usernameAndEmailLogin;
     [SerializeField] Toggle _rememberToggle;
     [SerializeField] Button _registerOrLogin;
-    [Header ("Guest Login Settings")]
+    [Header("Guest Login Settings")]
     [SerializeField] bool _guestLogin;
     [SerializeField] GameObject _emailRegisterGO, _passwordRegisterGO, _usernameRegisterGO, _repeatPasswordRegisterGO, _passwordLoginGO, _usernameAndEmailLoginGO;
     [SerializeField] Text _registerOrLoginText;
@@ -29,11 +30,11 @@ public class LoginMain : MonoBehaviour
     public void SwitchLoginType()
     {
         if (_usernameAndEmailLogin.text.IndexOf('@') > 0)
-        
+
             LoginEmail();
 
-            else LoginUserName();
-        
+        else LoginUserName();
+
     }
 
     public void Register()
@@ -79,6 +80,7 @@ public class LoginMain : MonoBehaviour
                 _registerOrLoginText.text = "Login";
                 break;
         }
-    }
+    } 
+    #endregion
 
 }
