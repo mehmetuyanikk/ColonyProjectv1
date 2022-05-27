@@ -1,0 +1,4 @@
+repository "ColonyProjectv1@mehmetuyanik@cloud"
+  path "/"
+    br "/main"
+    co "/main"
